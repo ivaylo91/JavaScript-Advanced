@@ -34,15 +34,18 @@ function initializeTable() {
     function moveUp() {
         let currentRow = $(this).parent().parent();
         currentRow.insertBefore(currentRow.prev());
+        fixLinks();
     }
     // Move row down
 
     function moveDown(){
         let currentRow = $(this).parent().parent();
         currentRow.insertAfter(currentRow.next());
+        fixLinks();
     }
     // Delete row
     function deleteRow() {
         $(this).parent().parent().remove();
+        fixLinks();
     }
 }
