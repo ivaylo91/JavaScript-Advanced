@@ -17,5 +17,5 @@ function increment(selector) {
     $('#addBtn').click(function () {
         let li = $('<li>').text($('textarea').val());
         li.appendTo('ul');
-    })
+    });
 }
