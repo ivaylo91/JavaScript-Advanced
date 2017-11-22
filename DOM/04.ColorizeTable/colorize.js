@@ -1,9 +1,10 @@
 function colorize() {
 
-    let tr = document.querySelectorAll('table tr');
+    /* let tr = document.querySelectorAll('table tr');
 
-    for (let i = 1; i < tr.length; i += 2) {
+     for (let i = 1; i < tr.length; i += 2) {
 
-        tr[i].style.backgroundColor = 'teal';
-    }
+         tr[i].style.backgroundColor = 'teal';
+     }*/
+    $('tr:odd').css('background', 'teal');
 }
