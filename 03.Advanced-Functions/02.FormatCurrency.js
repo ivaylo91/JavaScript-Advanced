@@ -6,4 +6,14 @@ function formatCurrency(separator, symbol, symbolFirst, value) {
     else return result + ' ' + symbol;
 }
 
-console.log(formatCurrency(",", 'лв', false, 1.60));
+function getDollarFormatter(formatter) {
+
+    return function (value) {
+
+        return formatter(',', '$', false, value);
+    }
+}
+
+let dollars = getDollarFormatter(formatCurrency);
+
+console.log(dollars(5345));
