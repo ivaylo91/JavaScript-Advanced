@@ -1,5 +1,7 @@
 function aggregate(arr) {
 
+    // Write a JS program that uses a reducer function to display information about an input array.
+
     function reduce(arr, func) {
 
         let result = arr[0];
