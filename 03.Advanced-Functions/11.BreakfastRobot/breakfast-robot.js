@@ -6,25 +6,25 @@ let solution = (function () {
         flavour: 0
     };
     let products = {
-        Apple: {
+        apple: {
             carbohydrates: 1,
             flavour: 2
         },
-        Coke: {
+        coke: {
             carbohydrates: 10,
             flavour: 20
         },
-        Burger: {
+        burger: {
             carbohydrates: 5,
             fat: 7,
             flavour: 3
         },
-        Omlete: {
+        omlete: {
             protein: 5,
             fat: 1,
             flavour: 1
         },
-        Cheverme: {
+        cheverme: {
             protein: 10,
             carbohydrates: 10,
             fat: 10,
