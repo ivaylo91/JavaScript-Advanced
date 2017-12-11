@@ -1,4 +1,4 @@
-let ecuclid = function (a, b) {
+let euclid = function (a, b) {
     return gcd(a, b);
 
     function gcd(a, b) {
@@ -9,4 +9,4 @@ let ecuclid = function (a, b) {
         }
     }
 };
-console.log(ecuclid(252,105));
+console.log(euclid(252,105));
