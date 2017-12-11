@@ -38,8 +38,8 @@ let solution = (function () {
         if (command === 'restock') {
             let microElement = inputData[1];
             let quantity = Number(inputData[2]);
-
             robot[microElement] += quantity;
+            console.log("Success");
         } else if (command === 'report') {
             console.log(`protein = ${robot.protein} carbohydrates=${robot.carbohydrates} fat=${robot.fat} flavour=${robot.flavour}`);
         } else if (command === 'prepare') {
