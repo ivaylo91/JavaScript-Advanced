@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sum</title>
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="model.js"></script>
+</head>
+<body>
+<input type="text" id="num1">
+<input type="text" id="num2">
+<input type="text" id="sum" readonly="readonly">
+<button id="sumButton">Sum</button>
+<button id="subtractButton">Subtract</button>
+</body>
+<script>
+    $(function () {
+        let model = getModel();
+        model.init('#num1', '#num2', '#sum');
+        $('#sumButton').click(model.add);
+        $('#subtractButton').click(model.subtract);
+    });
+</script>
+</html>
