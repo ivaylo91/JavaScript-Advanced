@@ -1,66 +1,48 @@
-function carFactory(obj) {
-    let engine = {};
-    let carriage = {};
+function assembleCar(initialCarParts) {
+    let modifiedCar = {};
+    let engine;
+    if (initialCarParts.power <= 90) {
+        engine = {
+            power: 90,
+            volume: 1800
+        }
+    } else if (initialCarParts.power <= 120) {
+
+        engine = {
+            power: 120,
+            volume: 2400
+        }
+    } else if (initialCarParts.power <= 200) {
+
+        engine = {
+            power: 200,
+            volume: 3500
+        }
+    }
     let wheels = [];
 
-    function determineCarParts() {
+    if (initialCarParts.wheelSize % 2 === 0) {
 
-        function determineEngine() {
-            if (obj.power <= 90) {
-                engine.power = 90;
-                engine.volume = 1800;
-            }
-            else if (obj.power <= 120) {
-                engine.power = 120;
-                engine.volume = 2400;
-            }
-            else {
-                engine.power = 200;
-                engine.volume = 3500;
-            }
-            return engine;
-        }
-
-        function determineCarriage() {
-            if (obj.carriage == 'hatchback') {
-                carriage.type = 'hatchback';
-            }
-            else {
-                carriage.type = 'coupe';
-            }
-            carriage.color = obj.color;
-            return carriage;
-        }
-
-        function determineWheelsize() {
-            let wheel = obj.wheelsize;
-            if (wheel % 2 == 0) {
-                wheel -= 1;
-            }
-            wheels.push(wheel, wheel, wheel, wheel);
-            return wheels;
-        }
-
-        determineEngine();
-        determineCarriage();
-        determineWheelsize();
+        initialCarParts.wheelSize--;
     }
-
-    determineCarParts();
-
-    let product = {
-        model: obj.model,
-        engine,
-        carriage,
-        wheels
+    for (let i = 0; i < 4; i++) {
+        wheels.push(initialCarParts.wheelSize);
+    }
+    modifiedCar.model = initialCarParts.model;
+    modifiedCar.engine = engine;
+    modifiedCar.carrige = {
+        type: initialCarParts.type,
+        color: initialCarParts.color
     };
-    return product;
+    modifiedCar.wheelSize = wheels;
+
+    return modifiedCar;
 }
 
-console.log(carFactory({
+console.log(assembleCar({
     model: 'Opel Vectra',
     power: 110,
-    color: 'grey',
-    carrige: 'coupe',
-    wheels: 17
+    type: 'hatchback',
+    color: 'blue',
+    wheelSize: 17
 }));
