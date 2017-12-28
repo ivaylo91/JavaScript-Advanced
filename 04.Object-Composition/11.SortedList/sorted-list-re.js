@@ -16,7 +16,7 @@ function sortedList() {
             }
         },
         size: function () {
-            return this.internalArray.length;
+            return `Size:${this.internalArray.length}`;
         },
         toString: function () {
             return this.internalArray.join(' ');
