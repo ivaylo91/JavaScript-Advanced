@@ -6,16 +6,20 @@ function sortedList() {
             this.internalArray.sort((a, b) => a - b);
         },
         remove: function (index) {
-            this.internalArray.splice(index, 1);
+            if (index >= 0 && index < this.internalArray.length) {
+                this.internalArray.splice(index, 1);
+            }
         },
         get: function (index) {
-            return this.internalArray[index];
+            if (index >= 0 && index < this.internalArray.length) {
+                return this.internalArray[index];
+            }
         },
         size: function () {
             return this.internalArray.length;
         },
         toString: function () {
-            return this.internalArray;
+            return this.internalArray.join(' ');
         }
     }
 }
