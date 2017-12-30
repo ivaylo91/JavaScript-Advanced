@@ -1,3 +1,8 @@
+/*
+  Write a JS function that takes a deck of cards as a string array and prints them as a sequence of cards (space
+separated). Print &quot;Invalid card: [card]&quot; when an invalid card definition is passed as input. Use the solution from the
+previous task to generate the cards.
+ */
 function printDeckOfCards(cards) {
     function makeCard(face, suit) {
         const validFaces = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
