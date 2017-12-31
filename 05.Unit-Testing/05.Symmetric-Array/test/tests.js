@@ -21,5 +21,11 @@ describe("Check symmetry", function () {
         it('should return false for [1,2,4,1]', function () {
             expect(isSymmetric([1, 2, 3, 4, 1])).to.be.false;
         });
+        it('should return false for [1,2]', function () {
+            expect(isSymmetric([1, 2])).to.be.false;
+        });
+        it('should return true for [1]', function () {
+            expect(isSymmetric([1])).to.be.true;
+        });
     });
 });
