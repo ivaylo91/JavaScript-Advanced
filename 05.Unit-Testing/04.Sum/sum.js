@@ -18,4 +18,10 @@ describe("Test sumator", function () {
     it("Should return 3 for['1',2])", function () {
         expect(sum(['1', 2])).to.equal(3);
     });
+    it("Should return NaN", function () {
+        expect(sum(['pesho', 2])).to.be.NaN;
+    });
+    it("Should return NaN", function () {
+        expect(sum([{}, 2])).to.be.NaN;
+    });
 });
