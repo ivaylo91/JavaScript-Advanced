@@ -21,7 +21,7 @@ describe("Test sumator", function () {
     it("Should return NaN", function () {
         expect(sum(['pesho', 2])).to.be.NaN;
     });
-    it("Should return NaN", function () {
-        expect(sum([{}, 2])).to.be.NaN;
+    it("Should return 3.3", function () {
+        expect(sum([1.1, 1.1, 1.1])).to.be.closeTo(3.3, 0.0001);
     });
 });
