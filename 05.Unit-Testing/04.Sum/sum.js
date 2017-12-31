@@ -24,4 +24,8 @@ describe("Test sumator", function () {
     it("Should return 3.3", function () {
         expect(sum([1.1, 1.1, 1.1])).to.be.closeTo(3.3, 0.0001);
     });
+    it("Should work with negative numbers", function () {
+        expect(sum([-1, -2, 5])).to.equal(2);
+    });
+
 });
