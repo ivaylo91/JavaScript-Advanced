@@ -33,6 +33,9 @@ describe("Check symmetry", function () {
         it("should return false for [5,'hi',{a:5},new Date(),{a:5},5]", function () {
             expect(isSymmetric([5, 'hi', {a: 5}, new Date(), {a: 5}, 5])).to.be.false;
         });
+        it("should return false for 1,2,3", function () {
+            expect(isSymmetric(1,2,3)).to.be.false;
+        });
     });
 
 });
