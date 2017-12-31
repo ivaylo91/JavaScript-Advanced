@@ -27,5 +27,8 @@ describe("Check symmetry", function () {
         it('should return true for [1]', function () {
             expect(isSymmetric([1])).to.be.true;
         });
+        it("should return true for [5,'hi',{a:5},new Date(),{a:5},'hi',5]", function () {
+            expect(isSymmetric([5, 'hi', {a: 5}, new Date(), {a: 5}, 'hi', 5])).to.be.true;
+        });
     });
 });
