@@ -27,5 +27,8 @@ describe("Test sumator", function () {
     it("Should work with negative numbers", function () {
         expect(sum([-1, -2, 5])).to.equal(2);
     });
+    it("Should return NaN", function () {
+        expect(sum("pesho")).to.be.NaN;
+    });
 
 });
