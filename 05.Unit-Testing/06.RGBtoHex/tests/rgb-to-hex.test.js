@@ -27,4 +27,7 @@ describe("Test rgbToHexColor function", function () {
     it("Should be return undefined for fractions", function () {
         expect(rgbToHexColor('pesho', {name: 'gosho'}, [])).to.be.undefined;
     });
+    it("Should be return undefined for empty value", function () {
+        expect(rgbToHexColor(' ', 251, 176)).to.be.undefined;
+    });
 });
