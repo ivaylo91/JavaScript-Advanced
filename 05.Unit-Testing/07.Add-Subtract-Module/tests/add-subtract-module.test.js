@@ -9,8 +9,11 @@ describe("Calculator maker", () => {
     beforeEach(() => {
         calculator = createCalculator();
     });
+
     it("should return an object", () => {
         expect(typeof  calculator).to.equal("object");
     });
-
+    it("should return 0 value when created.", () => {
+        expect(calculator.get()).to.equal(0);
+    });
 });
