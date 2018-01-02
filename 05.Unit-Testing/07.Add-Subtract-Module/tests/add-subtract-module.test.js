@@ -46,6 +46,7 @@ describe("Calculator maker", () => {
     });
     it("should work with numbers as string", () => {
         calculator.add('7');
-        expect(calculator.get()).to.equal(7);
+        calculator.add(1)
+        expect(calculator.get()).to.equal(8);
     });
 });
