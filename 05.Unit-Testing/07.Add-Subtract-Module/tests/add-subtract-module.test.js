@@ -29,4 +29,9 @@ describe("Calculator maker", () => {
         calculator.subtract(1.13);
         expect(calculator.get()).to.be.closeTo(2.01, 0.001);
     });
+    it("should work with negative numbers", () => {
+        calculator.add(-4);
+        calculator.subtract(-3);
+        expect(calculator.get()).to.equal(-1);
+    });
 });
