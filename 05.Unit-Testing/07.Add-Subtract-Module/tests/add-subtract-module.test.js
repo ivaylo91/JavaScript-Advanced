@@ -13,7 +13,15 @@ describe("Calculator maker", () => {
     it("should return an object", () => {
         expect(typeof  calculator).to.equal("object");
     });
-    it("should return 0 value when created.", () => {
-        expect(calculator.get()).to.equal(0);
+    it("should add", () => {
+        calculator.add(3);
+        calculator.add(5);
+        expect(calculator.get()).to.equal(8);
+    });
+    it("should subtract", () => {
+        calculator.add(5);
+        calculator.add(6);
+        calculator.subtract(2);
+        expect(calculator.get()).to.equal(9);
     });
 });
