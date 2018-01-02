@@ -24,4 +24,9 @@ describe("Calculator maker", () => {
         calculator.subtract(2);
         expect(calculator.get()).to.equal(9);
     });
+    it("should work with fractions", () => {
+        calculator.add(3.14);
+        calculator.subtract(1.14);
+        expect(calculator.get()).to.equal(2);
+    });
 });
