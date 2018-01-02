@@ -34,4 +34,9 @@ describe("Calculator maker", () => {
         calculator.subtract(-3);
         expect(calculator.get()).to.equal(-1);
     });
+    it("should return NaN if input is not numbers", () => {
+        calculator.add('hello');
+        calculator.add(2);
+        expect(calculator.get()).to.be.NaN;
+    });
 });
