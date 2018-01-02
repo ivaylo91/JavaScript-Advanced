@@ -14,6 +14,10 @@ describe('isEvenOrOdd', () => {
     });
     it('with an odd length string,should return correct result', () => {
         assert.equal(evenOrOdd("pesho"), 'odd', "Function did not return correct result");
-    })
-    ;
+    });
+    it('with multiple consecutive checks, should return correct values', () => {
+        expect(evenOrOdd("cat")).to.equal("odd", "Function did not return correct result");
+        expect(evenOrOdd("alabala")).to.equal("odd", "Function did not return correct result");
+        expect(evenOrOdd("is it even")).to.equal("even", "Function did not return correct result");
+    });
 });
