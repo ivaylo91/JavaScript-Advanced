@@ -26,7 +26,7 @@ describe("Calculator maker", () => {
     });
     it("should work with fractions", () => {
         calculator.add(3.14);
-        calculator.subtract(1.14);
-        expect(calculator.get()).to.equal(2);
+        calculator.subtract(1.13);
+        expect(calculator.get()).to.be.closeTo(2.01, 0.001);
     });
 });
