@@ -44,4 +44,8 @@ describe("Calculator maker", () => {
         calculator.subtract(2);
         expect(calculator.get()).to.be.NaN;
     });
+    it("should work with numbers as string", () => {
+        calculator.add('7');
+        expect(calculator.get()).to.equal(7);
+    });
 });
