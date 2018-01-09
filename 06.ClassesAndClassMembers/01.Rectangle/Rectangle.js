@@ -4,9 +4,10 @@ class Rectangle {
         this.width = width;
         this.height = height;
         this.color = color;
-        this.calcArea = function () {
-            return width * height;
-        }
+    }
+
+    calcArea() {
+        return this.width * this.height;
     }
 }
 
