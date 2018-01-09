@@ -13,13 +13,5 @@ class Person {
 
 }
 
-function getPeople() {
-    return [
-        new Person("Maria", "Petrova", 22, "mp@yahoo.com"),
-        new Person("SoftUni"),
-        new Person("Stephan", "Nikolov", 25),
-        new Person("Peter", "Kolev", 24, "ptr@gmail.com")
-    ];
-}
-
-console.log(getPeople().join('\n'));
+let person = new Person("Maria", "Petrova", 22, "mp@yahoo.com");
+console.log(person.toString());
