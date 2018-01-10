@@ -16,7 +16,7 @@ class Circle {
             throw new RangeError(' Diameter must be positive number.');
 
         }
-        this._radius = diameter / 2;
+        this.radius = diameter / 2;
     }
 
     get area() {
