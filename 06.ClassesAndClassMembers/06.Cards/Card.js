@@ -2,11 +2,10 @@ let Suits = {
     SPADES: "\u2660",
     HEARTS: "\u2665",
     DIAMONDS: "\u2666",
-    CUBS: "\u2663"
+    CLUBS: "\u2663"
 };
 
 class Card {
-
 
     constructor(face, suit) {
         this._face = face;
@@ -41,20 +40,19 @@ class Card {
     }
 
     toString() {
-        return this.face + this.suit;
+        return this._face + this._suit;
     }
 
     static get validFaces() {
 
-        return Card._validFaces;
+        return Card._validFaces = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
     }
 }
-
-Card._validFaces = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
 
 let card = new Card();
 card.face = '2';
 card.suit = Suits.DIAMONDS;
 console.log(' ' + card);
-
+let card2 = new Card('1', Suits.CLUBS);
+console.log(' ' + card2);
 
