@@ -2,6 +2,7 @@ let evenOrOdd = require('../even-or-odd').evenOrOdd;
 
 let expect = require('chai').expect;
 let assert = require('chai').assert;
+
 describe('isEvenOrOdd', () => {
     it('with a number parameter, should be return undefined', () => {
         expect(evenOrOdd(13)).to.equal(undefined, 'Function did not return correct result !');
