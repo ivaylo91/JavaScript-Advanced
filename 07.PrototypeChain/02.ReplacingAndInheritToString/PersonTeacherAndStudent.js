@@ -41,6 +41,8 @@ class Student extends Person {
 let person = new Person("Maria", "maria@yahoo.bg");
 let teacher = new Teacher("Ivan", "ivan@ivan.bg", "history");
 let student = new Student("Pesho", "pesho@gmail.com", "Math");
+
+console.log(person.toSpiciesString());
 console.log(person.toString());
 console.log(teacher.toString());
 console.log(student.toString());
