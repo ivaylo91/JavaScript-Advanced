@@ -1,7 +1,7 @@
 class Figure {
 
     constructor() {
-        if (this.constructor === Figure) {
+        if (new.target === Figure) {
             throw new TypeError('abstract class cannot initialize');
         }
     }
@@ -47,4 +47,4 @@ console.log(circle.area.toFixed(2));
 console.log(circle.toString());
 let rectangle = new Rectangle(3, 4);
 console.log(rectangle.area);
-console.log(rectangle.toString())
+console.log(rectangle.toString());
