@@ -5,6 +5,20 @@ class Figure {
             throw new TypeError('abstract class cannot initialize');
         }
     }
+
+    get area() {
+        switch (this.constructor) {
+            case Circle:
+                return Math.PI * (this.radius) ** 2;
+            case Rectangle:
+                return this.width * this.height;
+
+        }
+    }
+
+    toString() {
+        return this.constructor.name;
+    }
 }
 
 class Circle extends Figure {
@@ -14,13 +28,8 @@ class Circle extends Figure {
         this.radius = radius;
     }
 
-    get area() {
-        return Math.PI * (this.radius ** 2);
-    }
-
     toString() {
-        let className = this.constructor.name;
-        return `${className} - radius:${this.radius}`;
+        return `${super.toString()} - radius:${this.radius}`;
     }
 }
 
@@ -32,18 +41,13 @@ class Rectangle extends Figure {
         this.height = height;
     }
 
-    get area() {
-        return this.width * this.height;
-    }
-
     toString() {
-        let className = this.constructor.name;
-        return `${className} - width:${this.width},height:${this.height}`;
+        return `${super.toString()} - width:${this.width},height:${this.height}`;
     }
 }
 
 let circle = new Circle(5);
-console.log(circle.area.toFixed(2));
+console.log(circle.area);
 console.log(circle.toString());
 let rectangle = new Rectangle(3, 4);
 console.log(rectangle.area);
